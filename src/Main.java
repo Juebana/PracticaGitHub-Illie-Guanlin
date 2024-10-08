@@ -20,7 +20,11 @@ public class Main {
 
             switch (option) {
                 case 1:
-                    // Agregar una nueva tarea
+                    System.out.println("Introduce la descripción de la tarea:");
+                    String description = scanner.nextLine();
+                    Task task = new Task(description);
+                    tasks.add(task);
+                    System.out.println("Tarea agregada exitosamente.");
                     break;
                 case 2:
                     // Marcar una tarea como completada
