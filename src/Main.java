@@ -33,7 +33,14 @@ public class Main {
                     }
                     break;
                 case 3:
-                    // Mostrar la lista de tareas
+                    if (tasks.isEmpty()) {
+                        System.out.println("No hay tareas.");
+                    } else {
+                        for (int i = 0; i < tasks.size(); i++) {
+                            Task task = tasks.get(i);
+                            System.out.println(i + ". " + task.getDescription() + " - " + (task.isCompleted() ? "Completada" : "Pendiente"));
+                        }
+                    }
                     break;
                 case 4:
                     System.exit(0);
