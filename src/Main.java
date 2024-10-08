@@ -23,7 +23,14 @@ public class Main {
                     // Agregar una nueva tarea
                     break;
                 case 2:
-                    // Marcar una tarea como completada
+                    System.out.println("Introduce el número de la tarea a marcar como completada:");
+                    int taskIndex = scanner.nextInt();
+                    if (taskIndex >= 0 && taskIndex < tasks.size()) {
+                        tasks.get(taskIndex).setCompleted(true);
+                        System.out.println("Tarea marcada como completada.");
+                    } else {
+                        System.out.println("Número de tarea inválido.");
+                    }
                     break;
                 case 3:
                     // Mostrar la lista de tareas
